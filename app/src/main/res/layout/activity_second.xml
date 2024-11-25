@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#429FE8"
+    android:layout_height="match_parent"
+    tools:context=".second">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/img"
+            android:contentDescription="Image representing Bangladesh"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_2" />
+
+
+        <ImageView
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:layout_marginTop="20dp"
+        android:id="@+id/layout"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal">
+
+
+
+            <HorizontalScrollView
+                android:layout_width="250dp"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bangladesh"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_3"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="10dp"
+                            android:contentDescription="Image representing Bangladesh"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bangladesh"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_3"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="10dp"
+                            android:contentDescription="Image representing Bangladesh"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bangladesh"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_3"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="10dp"
+                            android:contentDescription="Image representing Bangladesh"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bangladesh"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_3"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="10dp"
+                            android:contentDescription="Image representing Bangladesh"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bangladesh"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/img_3"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="10dp"
+                            android:contentDescription="Image representing Bangladesh"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:id="@+id/l4"
+                android:layout_height="300dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangladesh"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/img_4"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="10dp"
+                        android:contentDescription="Image representing Bangladesh"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangladesh"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/img_4"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="10dp"
+                        android:contentDescription="Image representing Bangladesh"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangladesh"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/img_4"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="10dp"
+                        android:contentDescription="Image representing Bangladesh"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangladesh"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/img_4"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="10dp"
+                        android:contentDescription="Image representing Bangladesh"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <HorizontalScrollView
+        android:layout_width="380dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/layout"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_2"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:contentDescription="Image representing Bangladesh"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_2"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:contentDescription="Image representing Bangladesh"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_2"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:contentDescription="Image representing Bangladesh"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_2"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:contentDescription="Image representing Bangladesh"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_2"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:contentDescription="Image representing Bangladesh"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_2"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:contentDescription="Image representing Bangladesh"/>
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
