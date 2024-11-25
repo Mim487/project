@@ -12,30 +12,23 @@
 
 
 
-
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:src="@drawable/img_7"
+        android:scaleType="centerCrop"
+        android:id="@+id/img5"/>
 
     <WebView
         android:layout_width="match_parent"
         android:layout_height="270dp"
         android:visibility="gone"
         android:id="@+id/wv" />
-    
-
-    <ImageView
-        android:layout_alignParentStart="true"
-        android:layout_margin="5dp"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/back"/>
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/wv"
+        android:layout_below="@id/img5"
         android:layout_marginTop="10dp"
         android:id="@+id/vd"
         android:orientation="vertical">

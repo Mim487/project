@@ -19,7 +19,8 @@ public class Fifth extends AppCompatActivity {
     public static String vd_url = "";
     LinearLayout l1,l2,l3,l4,l5,l6,l7,l8,l9,l10;
     LinearLayout vd;
-    ImageView img;
+    ImageView img5;
+    boolean work = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,25 @@ public class Fifth extends AppCompatActivity {
         l8 = findViewById(R.id.l8);
         l9 = findViewById(R.id.l9);
         l10 = findViewById(R.id.l10);
+        img5 = findViewById(R.id.img5);
+
+        img5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (work){
+                    wv.setVisibility(View.GONE);
+
+
+                }else {
+                    wv.setVisibility(View.VISIBLE);
+
+
+                }
+                work = false;
+
+
+            }
+        });
 
         wv = findViewById(R.id.wv);
         wv.getSettings().setJavaScriptEnabled(true);
@@ -65,74 +85,75 @@ public class Fifth extends AppCompatActivity {
         l2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/AIvaEjihqi8?si=Z8BEJmVUOfuyJGf9";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/AIvaEjihqi8?si=Z8BEJmVUOfuyJGf9");
+                wv.setVisibility(View.VISIBLE);
+
+
 
             }
         });
         l3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/Y9YQggN56sM?si=0FDB9zD-NXcgRrkX";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/Y9YQggN56sM?si=0FDB9zD-NXcgRrkX");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/NY1cMgz1JF0?si=PXJUz1sUJN0e_LMe";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/NY1cMgz1JF0?si=PXJUz1sUJN0e_LMe");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/VIgd99Tes5o?si=MrinURLspl4iQeqg";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/VIgd99Tes5o?si=MrinURLspl4iQeqg");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/R7aCOI4DuA0?si=ra7kAJHnSt5IIz4R";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/R7aCOI4DuA0?si=ra7kAJHnSt5IIz4R");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/qsDekDjn9LA?si=9m7NkDp0PSXBtjju";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl( "https://www.youtube.com/embed/qsDekDjn9LA?si=9m7NkDp0PSXBtjju");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/Re7zBF6gFRM?si=dYHoeN3r-MSXnSkj";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/Re7zBF6gFRM?si=dYHoeN3r-MSXnSkj");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/Dai9lZ4Sne0?si=RykwVmaMk9_vEGAv";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/Dai9lZ4Sne0?si=RykwVmaMk9_vEGAv");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
         l10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fifth.vd_url = "https://www.youtube.com/embed/kMUijDNYq_M?si=ErXPDAjuCl9rVzW2";
-                Intent ok = new Intent(Fifth.this,Fifth.class);
-                startActivity(ok);
+                wv.loadUrl("https://www.youtube.com/embed/kMUijDNYq_M?si=ErXPDAjuCl9rVzW2");
+                wv.setVisibility(View.VISIBLE);
+
             }
         });
 
