@@ -35,6 +35,7 @@
             android:background="#49f"
             android:layout_centerHorizontal="true"
             app:cardCornerRadius="15dp"
+            android:id="@+id/l10"
             android:layout_below="@id/img5"
             app:cardElevation="20dp"
             android:layout_marginTop="20dp">
@@ -137,8 +138,9 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:src="@drawable/img_6"
+        android:layout_marginTop="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_above="@id/img"
+        android:layout_below="@id/l10"
         android:scaleType="centerCrop"/>
 
 

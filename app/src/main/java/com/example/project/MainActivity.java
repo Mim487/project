@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -26,8 +27,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class MainActivity extends AppCompatActivity {
-    TextView text,text1,text2,text3,text4;
-    LinearLayout l1;
+    CardView l1,l2,l3,l4,l5;
 
     private InterstitialAd mInterstitialAd;
     LinearLayout adContainerView;
@@ -39,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        text3 = findViewById(R.id.text3);
-        text4 = findViewById(R.id.text4);
-        text2 = findViewById(R.id.text2);
-        text1 = findViewById(R.id.text1);
-        text = findViewById(R.id.text);
+        l1 = findViewById(R.id.l1);
+        l2 = findViewById(R.id.l2);
+        l3 = findViewById(R.id.l3);
+        l4 = findViewById(R.id.l4);
+        l5 = findViewById(R.id.l5);
 
-        text.setOnClickListener(new View.OnClickListener() {
+
+        l1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent food = new Intent(MainActivity.this,second.class);
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        text1.setOnClickListener(new View.OnClickListener() {
+        l2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent Bus = new Intent(MainActivity.this,Third.class);
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-        text2.setOnClickListener(new View.OnClickListener() {
+        l3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent Truck = new Intent(MainActivity.this,Forth.class);
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        text3.setOnClickListener(new View.OnClickListener() {
+        l4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent Launch = new Intent(MainActivity.this,Fifth.class);
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-        text4.setOnClickListener(new View.OnClickListener() {
+        l5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent Ride = new Intent(MainActivity.this,Sixth.class);
