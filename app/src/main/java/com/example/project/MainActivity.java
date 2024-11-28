@@ -96,14 +96,105 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        adContainerView = findViewById(R.id.adContainerView);
+        adContainerView.setVisibility(View.GONE);
+        if (getString(R.string.show_admob_ad).contains("ON")) {
+            initAdmobAd();
+            loadBannerAd();
+            loadFullscreenAd();
+        }
 
 
 
+    }
+    private void initAdmobAd() {
+        // AdMob Initialization
+        MobileAds.initialize(this, initializationStatus -> {});
+    }
+
+
+    // Banner Ad Load Counter
+    int BANNER_AD_CLICK_COUNT = 0;
+
+    // loadBannerAd method
+    private void loadBannerAd() {
+        // Create a new ad view and set the ad unit ID and size
+        AdView adView = new AdView(this);
+        adView.setAdUnitId("ca-app-pub-3940256099942544/9214589741"); // Test Ad Unit ID
+        adView.setAdSize(AdSize.BANNER);
+
+        // Add the ad view to the container and load the ad
+        adContainerView.removeAllViews();
+        adContainerView.addView(adView);
+
+        // Start loading the ad
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                if (BANNER_AD_CLICK_COUNT >= 2) {
+                    if (adContainerView != null) adContainerView.setVisibility(View.GONE);
+                } else {
+                    if (adContainerView != null) adContainerView.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+            }
+
+            @Override
+            public void onAdClicked() {
+                BANNER_AD_CLICK_COUNT++;
+                if (BANNER_AD_CLICK_COUNT >= 2) {
+                    if (adContainerView != null)adContainerView.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
+
+    // Fullscreen Ad Load Counter
+    int FULLSCREEN_AD_LOAD_COUNT = 0;
+
+    // loadFullscreenAd method
+    private void loadFullscreenAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                mInterstitialAd = interstitialAd;
+                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        FULLSCREEN_AD_LOAD_COUNT++;
+                        if (FULLSCREEN_AD_LOAD_COUNT < 3) loadFullscreenAd();
+                        Log.d("FULLSCREEN_AD", "Ad dismissed. Load count: " + FULLSCREEN_AD_LOAD_COUNT);
+                    }
+                });
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                mInterstitialAd = null;
+                Log.d("FULLSCREEN_AD", "Failed to load interstitial ad: " + loadAdError.getMessage());
+            }
+        });
+    }
+
+    // Show Interstitial Ad
+    private void showInterstitial() {
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(this);
+        } else {
+            Log.d("INTERSTITIAL_AD", "Interstitial ad is not ready yet.");
+        }
     }
 
 
