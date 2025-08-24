@@ -280,8 +280,8 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_below="@id/l5"
-        android:scaleType="fitEnd"
         android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
         android:id="@+id/img5"
         android:layout_alignParentBottom="true"
         android:src="@drawable/img_1"/>
